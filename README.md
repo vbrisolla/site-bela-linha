@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="img/logo.png" alt="Logo da Bela Linha" width="260">
+  <img src="bela-linha/img/logo.png" alt="Logo da Bela Linha" width="260">
 
   <h1>Bela Linha — Bordados personalizados</h1>
 
@@ -11,7 +11,7 @@
   </p>
 </div>
 
-![Página inicial do site da Bela Linha](docs/inicio.jpg)
+![Página inicial do site da Bela Linha](bela-linha/docs/inicio.jpg)
 
 ## Sumário
 
@@ -29,7 +29,7 @@
 
 As peças podem ser filtradas por categoria: **Bastidores**, **Quadros** ou **Chaveiros**. Os círculos da seção "O que eu bordo" também aplicam o filtro e levam até a vitrine.
 
-![Vitrine de peças bordadas com os filtros por categoria](docs/vitrine.jpg)
+![Vitrine de peças bordadas com os filtros por categoria](bela-linha/docs/vitrine.jpg)
 
 ### Card com os detalhes da peça
 
@@ -45,8 +45,8 @@ Ao clicar na foto de uma peça, um card abre sobre a página com o tamanho, o te
     <th>No celular</th>
   </tr>
   <tr>
-    <td><img src="docs/card.jpg" alt="Card da peça aberto no computador" width="560"></td>
-    <td><img src="docs/card-celular.jpg" alt="Card da peça aberto no celular" width="220"></td>
+    <td><img src="bela-linha/docs/card.jpg" alt="Card da peça aberto no computador" width="560"></td>
+    <td><img src="bela-linha/docs/card-celular.jpg" alt="Card da peça aberto no celular" width="220"></td>
   </tr>
 </table>
 
@@ -54,7 +54,7 @@ Ao clicar na foto de uma peça, um card abre sobre a página com o tamanho, o te
 
 Uma seção explica como pedir um bordado com frase, arte ou nome, em três passos.
 
-![Seção de encomendas personalizadas](docs/encomenda.jpg)
+![Seção de encomendas personalizadas](bela-linha/docs/encomenda.jpg)
 
 ### Outros detalhes
 
