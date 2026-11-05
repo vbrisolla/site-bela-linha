@@ -129,19 +129,18 @@ a:hover { color: var(--vinho-escuro); }
 /* Card da peça */
 .peca__foto { cursor: pointer; }
 html:has(.zoom[open]) { overflow: hidden; }
-.zoom { position: fixed; width: min(860px, calc(100vw - 32px)); max-width: none; max-height: calc(100dvh - 32px); margin: auto; padding: 0; border: 0; border-radius: 16px; background: var(--card); color: var(--tinta); overflow: auto; box-shadow: 0 20px 60px rgba(38, 26, 23, .4); }
+.zoom { position: fixed; inset: 0; width: 100vw; width: 100dvw; height: 100vh; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: none; overflow: hidden; }
 .zoom::backdrop { background: rgba(38, 26, 23, .6); }
-.zoom[open] { display: flex; }
-.zoom__foto { position: relative; flex: 0 0 440px; padding: 16px; }
+.zoom[open] { display: flex; align-items: center; justify-content: center; gap: 16px; }
+.zoom__card { position: relative; display: flex; width: min(860px, calc(100vw - 152px)); max-height: calc(100dvh - 32px); border-radius: 16px; background: var(--card); color: var(--tinta); overflow: auto; box-shadow: 0 20px 60px rgba(38, 26, 23, .4); }
+.zoom__foto { flex: 0 0 min(440px, 52%); padding: 16px; }
 .zoom__area { aspect-ratio: 4 / 5; border-radius: 10px; background: var(--creme-2); overflow: auto; }
 .zoom__img { width: 100%; height: 100%; object-fit: cover; cursor: zoom-in; }
 .zoom--perto .zoom__img { max-width: none; height: auto; cursor: zoom-out; }
-.zoom__btn { position: absolute; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; padding: 0 0 4px; border: 0; border-radius: 50%; background: rgba(251, 249, 245, .9); color: var(--tinta); font: 400 30px/1 var(--sans); cursor: pointer; }
+.zoom__btn { flex: none; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; padding: 0 0 4px; border: 0; border-radius: 50%; background: rgba(251, 249, 245, .9); color: var(--tinta); font: 400 30px/1 var(--sans); cursor: pointer; }
 .zoom__btn:hover { background: var(--vinho); color: var(--creme); }
-.zoom__fechar { top: 12px; right: 12px; }
-.zoom__ant { top: 50%; left: 26px; transform: translateY(-50%); }
-.zoom__prox { top: 50%; right: 26px; transform: translateY(-50%); }
-.zoom--unica .zoom__ant, .zoom--unica .zoom__prox, .zoom--perto .zoom__ant, .zoom--perto .zoom__prox { display: none; }
+.zoom__fechar { position: absolute; top: 12px; right: 12px; }
+.zoom--unica .zoom__ant, .zoom--unica .zoom__prox { display: none; }
 .zoom__info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 10px; padding: 56px 28px 28px 12px; }
 .zoom__nome { margin: 0; font-family: var(--serif); font-size: 30px; font-weight: 600; line-height: 1.15; }
 .zoom__dados { margin: 8px 0; }
@@ -168,8 +167,10 @@ html:has(.zoom[open]) { overflow: hidden; }
   .peca h3 { font-size: 19px; }
   .peca .btn { margin: 0; padding: 0 10px; font-size: 12px; }
   .sobre { padding-top: 64px; padding-bottom: 64px; }
-  .zoom[open] { display: block; }
+  .zoom[open] { flex-wrap: wrap; align-content: center; gap: 8px 16px; }
+  .zoom__card { order: -1; display: block; flex: 0 0 calc(100vw - 32px); max-height: calc(100dvh - 76px); }
   .zoom__foto { padding: 12px; }
+  .zoom__area { aspect-ratio: auto; height: 44dvh; }
   .zoom__info { padding: 6px 20px 20px; }
   .zoom__nome { font-size: 26px; }
 }
