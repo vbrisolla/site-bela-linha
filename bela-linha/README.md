@@ -9,14 +9,14 @@ Site estático: só HTML, CSS e JavaScript, sem build e sem dependências.
 ```
 index.html   → conteúdo da página
 style.css    → visual (cores no topo, em :root)
-script.js    → links do WhatsApp e filtro da vitrine
+script.js    → links do WhatsApp, filtro da vitrine e card da peça
 img/         → logo, fotos e favicon
 ```
 
 ## Como adicionar uma peça
 
 1. Coloque a foto em `img/` (de preferência JPG em pé, proporção 4:5, até ~900 px de largura).
-2. No `index.html`, copie um bloco `<article class="peca">` e troque a foto, o `alt`, o tipo, o nome e o `data-cat` (`bastidores`, `quadros` ou `chaveiros`).
+2. No `index.html`, copie um bloco `<article class="peca">` e troque a foto, o `alt`, o tipo, o nome, o `data-cat` (`bastidores`, `quadros` ou `chaveiros`) e o `data-tamanho` (ex.: `19 cm`).
 3. O link do WhatsApp com o nome da peça é gerado sozinho.
 
 ## Como trocar o número do WhatsApp
