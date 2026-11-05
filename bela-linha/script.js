@@ -129,4 +129,23 @@ zoom.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowRight') mostrarPeca(zoomAtual + 1);
 });
 
+// Itens aparecem conforme a página desce
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const aoAparecer = new IntersectionObserver((entradas) => {
+    entradas.filter((e) => e.isIntersecting).forEach((e, i) => {
+      // Itens que entram juntos aparecem um logo depois do outro
+      e.target.style.transitionDelay = `${i * 90}ms`;
+      e.target.classList.add('revelar--visivel');
+      aoAparecer.unobserve(e.target);
+    });
+  }, { rootMargin: '0px 0px -8% 0px' });
+
+  document.querySelectorAll(
+    '.categorias .titulo, .categoria, .pecas__topo, .peca, .pecas__nota, .encomenda__texto, .passo, .sobre__foto, .sobre__texto'
+  ).forEach((el) => {
+    el.classList.add('revelar');
+    aoAparecer.observe(el);
+  });
+}
+
 document.getElementById('ano').textContent = new Date().getFullYear();
